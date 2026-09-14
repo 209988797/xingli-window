@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://209988797.github.io/xingli-window/sitemap.xml
