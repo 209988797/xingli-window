@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="佛山市星力门窗有限公司｜佛山门窗源头工厂，面向门店、经销商、门窗厂、装修公司、工程客户及加工厂长期配套供货。">
+<meta name="theme-color" content="#071525">
+<title>星力门窗｜佛山门窗源头工厂</title>
+<style>
+:root{--navy:#071525;--navy2:#0b2340;--blue:#058ed1;--cyan:#22b7eb;--ink:#0e1a27;--muted:#69798a;--paper:#f6f8fa;--line:#dfe6ec;--white:#fff;--max:1240px;--ease:cubic-bezier(.2,.75,.2,1)}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--white);line-height:1.65;overflow-x:hidden} a{color:inherit;text-decoration:none} img{display:block;max-width:100%} button,input,select,textarea{font:inherit}
+.container{width:min(var(--max),calc(100% - 48px));margin:auto} .eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+.header{position:fixed;z-index:50;inset:0 0 auto 0;height:84px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.16);transition:.3s var(--ease);color:#fff} .header.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(18px);color:var(--ink);box-shadow:0 8px 30px rgba(7,21,37,.08);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%} .brand img{height:44px;width:210px;object-fit:contain;background:#fff;border-radius:7px;padding:5px 10px} .navlinks{display:flex;align-items:center;gap:30px;font-size:14px;font-weight:700} .navlinks a{opacity:.84;position:relative} .navlinks a:hover{opacity:1} .nav-cta{padding:11px 17px;border:1px solid currentColor;border-radius:999px}
+.hero{min-height:720px;background:linear-gradient(110deg,#06111f 0%,#071a2d 55%,#092740 100%);color:#fff;position:relative;overflow:hidden;padding:150px 0 72px} .hero:before{content:"";position:absolute;width:720px;height:720px;border:1px solid rgba(34,183,235,.12);border-radius:50%;right:-260px;top:-250px;box-shadow:0 0 0 80px rgba(34,183,235,.035),0 0 0 160px rgba(34,183,235,.02)}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.03fr .97fr;gap:64px;align-items:center} .hero .eyebrow{color:#74d7fa} .hero h1{font-size:clamp(46px,6vw,82px);line-height:1.03;margin:14px 0 26px;letter-spacing:-.045em;font-weight:800} .hero h1 em{font-style:normal;color:#7fdbfb} .hero-desc{font-size:18px;color:#c4d1dc;max-width:650px;margin:0 0 32px} .hero-actions{display:flex;gap:12px;flex-wrap:wrap} .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 20px;font-weight:800;font-size:14px;border:1px solid transparent;cursor:pointer;transition:.25s var(--ease)} .btn.primary{background:#fff;color:var(--navy)} .btn.ghost{border-color:rgba(255,255,255,.38);color:#fff;background:transparent} .btn:hover{transform:translateY(-2px)}
+.hero-visual{position:relative} .hero-photo{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;box-shadow:0 38px 80px rgba(0,0,0,.33)} .hero-visual:before{content:"128 / SCENIC";position:absolute;z-index:3;left:-28px;top:34px;padding:14px 18px;background:#fff;color:#0d1e31;font-size:12px;font-weight:900;letter-spacing:.16em} .hero-caption{position:absolute;z-index:3;left:-28px;bottom:28px;background:rgba(7,21,37,.88);backdrop-filter:blur(10px);padding:18px 20px;border-left:3px solid var(--cyan);width:min(310px,80%);font-size:13px;color:#c9d7e3} .hero-caption strong{display:block;color:#fff;font-size:18px;margin-bottom:3px}
+.metrics{position:relative;z-index:4;margin-top:-1px;background:#fff;border-bottom:1px solid var(--line)} .metrics-grid{display:grid;grid-template-columns:repeat(4,1fr)} .metric{padding:31px 24px;border-right:1px solid var(--line)} .metric:last-child{border-right:0} .metric strong{display:block;font-size:31px;line-height:1.15;color:var(--navy);letter-spacing:-.03em} .metric span{font-size:13px;color:var(--muted)}
+.section{padding:96px 0} .section.soft{background:var(--paper)} .section-head{display:flex;align-items:end;justify-content:space-between;gap:34px;margin-bottom:42px} .section-head h2{font-size:clamp(32px,4vw,52px);line-height:1.12;letter-spacing:-.035em;margin:8px 0 0} .section-head p{max-width:550px;color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center} .about-photo{position:relative;overflow:hidden;background:#0a1b2e;min-height:540px} .about-photo img{width:100%;height:540px;object-fit:cover;opacity:.92} .about-photo:after{content:"XINGLI / FOSHAN";position:absolute;left:24px;bottom:22px;background:#fff;color:#0a1725;padding:12px 14px;font-size:11px;font-weight:900;letter-spacing:.16em} .about-copy h2{font-size:48px;line-height:1.12;letter-spacing:-.04em;margin:10px 0 24px} .about-copy p{color:var(--muted);font-size:16px} .about-points{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px} .about-point{padding:18px 0;border-top:1px solid var(--line)} .about-point b{display:block;font-size:15px;margin-bottom:4px} .about-point span{font-size:13px;color:var(--muted)}
+.filters{display:flex;gap:9px;flex-wrap:wrap} .filter{border:1px solid var(--line);background:#fff;color:#536476;padding:9px 15px;border-radius:999px;cursor:pointer;font-weight:700;font-size:13px} .filter.active{background:var(--navy);color:#fff;border-color:var(--navy)} .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px} .product-card{position:relative;min-width:0;background:#fff;border:1px solid var(--line);padding-bottom:22px;overflow:hidden;transition:.28s var(--ease)} .product-card:hover{transform:translateY(-6px);box-shadow:0 18px 55px rgba(7,21,37,.11)} .product-hit{position:absolute;inset:0;z-index:5;border:0;background:transparent;cursor:pointer} .product-photo{height:340px;overflow:hidden;background:#dce5eb} .product-photo img{width:100%;height:100%;object-fit:cover;transition:.6s var(--ease)} .product-card:hover .product-photo img{transform:scale(1.035)} .product-meta{display:flex;justify-content:space-between;padding:18px 20px 0;color:#7b8996;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase} .product-card h3{font-size:21px;line-height:1.3;margin:8px 20px 6px} .product-card p{margin:0 20px;color:var(--muted);font-size:13px}
+.standards{display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:start} .standards-intro{position:sticky;top:120px} .standards-intro h2{font-size:48px;line-height:1.12;margin:10px 0 18px;letter-spacing:-.04em} .standards-intro p{color:var(--muted)} .std-list{border-top:1px solid var(--line)} .std{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)} .std-num{font-weight:900;color:var(--blue);font-size:13px} .std h3{margin:0 0 5px;font-size:19px} .std p{margin:0;color:var(--muted);font-size:14px}
+.coop{background:var(--navy);color:#fff;position:relative;overflow:hidden} .coop:before{content:"XINGLI";position:absolute;right:-30px;bottom:-80px;font-weight:900;font-size:240px;letter-spacing:-.06em;color:rgba(255,255,255,.025)} .coop-grid{position:relative;z-index:2;display:grid;grid-template-columns:.9fr 1.1fr;gap:70px} .coop h2{font-size:52px;line-height:1.05;margin:12px 0 22px} .coop p{color:#b8c8d6} .coop-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px} .coop-tag{border:1px solid rgba(255,255,255,.22);padding:8px 12px;border-radius:999px;font-size:13px;color:#dbe6ef} .inquiry{background:#fff;color:var(--ink);padding:28px} .inquiry h3{margin:0 0 18px;font-size:24px} .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px} .field{display:flex;flex-direction:column;gap:6px} .field.full{grid-column:1/-1} .field label{font-size:12px;font-weight:800;color:#6c7b88} .field input,.field select,.field textarea{width:100%;border:1px solid #d9e1e8;background:#fafbfc;padding:12px 13px;outline:none;border-radius:0} .field textarea{min-height:84px;resize:vertical} .copy-btn{width:100%;margin-top:12px;background:var(--navy);color:#fff;border:0;border-radius:0;padding:14px;font-weight:900;cursor:pointer} .form-note{font-size:11px;color:#8b98a3;margin-top:9px}
+.address{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch} .address-card{background:#f7f9fb;border:1px solid var(--line);padding:32px} .address-card h3{font-size:26px;margin:8px 0 12px} .address-card p{color:var(--muted)} .address-card .big{font-size:18px;color:var(--ink);font-weight:800} .map-placeholder{min-height:320px;background:linear-gradient(135deg,#e9eef2,#f7f9fb);position:relative;overflow:hidden;border:1px solid var(--line)} .map-placeholder:before,.map-placeholder:after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(35deg,transparent 0 36px,rgba(7,21,37,.045) 37px 39px)} .map-placeholder:after{transform:rotate(90deg)} .pin{position:absolute;z-index:3;left:54%;top:48%;transform:translate(-50%,-50%);width:18px;height:18px;background:var(--blue);border:4px solid #fff;border-radius:50%;box-shadow:0 0 0 10px rgba(5,142,209,.16)}
+.footer{background:#050f1b;color:#8fa1b1;padding:45px 0 28px} .footer-grid{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center} .footer-brand img{height:42px;width:190px;object-fit:contain;background:#fff;border-radius:6px;padding:4px 8px;margin-bottom:12px} .footer p{font-size:12px;margin:4px 0} .footer-links{display:flex;gap:20px;color:#cbd6df;font-size:13px}
+.modal{position:fixed;z-index:100;inset:0;background:rgba(3,12,22,.76);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:24px} .modal.open{display:flex} .modal-card{width:min(980px,100%);max-height:88vh;overflow:auto;background:#fff;display:grid;grid-template-columns:1fr 1fr;box-shadow:0 30px 90px rgba(0,0,0,.35)} .modal-photo{min-height:560px;background:#dce5eb} .modal-photo img{width:100%;height:100%;object-fit:cover} .modal-copy{padding:42px;position:relative} .modal-close{position:absolute;right:20px;top:18px;border:0;background:#f0f3f5;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:22px} .modal-copy h3{font-size:34px;line-height:1.16;margin:10px 0 22px} .modal-copy ul{padding:0;list-style:none;border-top:1px solid var(--line)} .modal-copy li{padding:13px 0;border-bottom:1px solid var(--line);color:#506171} .modal-copy .quote{margin-top:28px;background:var(--navy);color:#fff;padding:16px 18px;display:inline-block;font-weight:800}
+.toast{position:fixed;z-index:120;left:50%;bottom:28px;transform:translate(-50%,20px);background:#071525;color:#fff;padding:12px 18px;opacity:0;pointer-events:none;transition:.25s;border-radius:999px;font-size:13px} .toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:980px){.navlinks{display:none} .hero-grid,.about-grid,.standards,.coop-grid,.address{grid-template-columns:1fr} .hero{padding-top:130px} .hero-visual{max-width:620px} .hero-visual:before,.hero-caption{left:18px} .metrics-grid{grid-template-columns:1fr 1fr} .metric:nth-child(2){border-right:0} .product-grid{grid-template-columns:1fr 1fr} .standards-intro{position:static} .modal-card{grid-template-columns:1fr} .modal-photo{min-height:360px;max-height:420px}}
+@media(max-width:620px){.container{width:min(var(--max),calc(100% - 28px))} .header{height:70px} .brand img{height:38px;width:178px} .hero{min-height:auto;padding:112px 0 52px} .hero h1{font-size:44px} .hero-desc{font-size:16px} .metrics-grid{grid-template-columns:1fr 1fr} .metric{padding:22px 15px} .metric strong{font-size:24px} .section{padding:68px 0} .section-head{display:block} .section-head p{margin-top:14px} .about-copy h2,.standards-intro h2,.coop h2{font-size:38px} .about-photo,.about-photo img{min-height:380px;height:380px} .product-grid{grid-template-columns:1fr} .product-photo{height:390px} .form-grid{grid-template-columns:1fr} .field.full{grid-column:auto} .footer-grid{grid-template-columns:1fr} .footer-links{flex-wrap:wrap} .modal-copy{padding:30px 22px} .modal-copy h3{font-size:28px}}
+
+/* === V3 refinements: larger brand + full-series scrolling showcase === */
+.header{height:96px}
+.brand{display:flex;align-items:center;flex:0 0 auto}
+.brand img{
+  width:286px!important;
+  height:66px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  padding:8px 16px!important;
+  border-radius:8px!important;
+  background:#fff!important;
+  box-shadow:0 8px 28px rgba(0,0,0,.10);
+}
+.header.scrolled .brand img{box-shadow:0 6px 22px rgba(7,21,37,.09)}
+.filters{display:none!important}
+#products .section-head{margin-bottom:24px}
+.product-carousel-shell{position:relative}
+.product-carousel-toolbar{
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  margin:0 0 18px;color:#647587;font-size:13px
+}
+.product-carousel-label{display:flex;align-items:center;gap:12px;font-weight:700}
+.product-carousel-label b{font-size:14px;color:var(--navy)}
+.product-carousel-count{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:64px;height:32px;padding:0 10px;border:1px solid var(--line);
+  border-radius:999px;background:#fff;color:#415467;font-weight:800
+}
+.product-carousel-actions{display:flex;gap:8px}
+.carousel-btn{
+  width:42px;height:42px;border-radius:50%;border:1px solid #cfd9e2;background:#fff;
+  color:var(--navy);display:grid;place-items:center;cursor:pointer;font-size:21px;
+  transition:.22s var(--ease);box-shadow:0 7px 18px rgba(7,21,37,.05)
+}
+.carousel-btn:hover{background:var(--navy);color:#fff;transform:translateY(-1px)}
+.product-grid{
+  display:flex!important;
+  grid-template-columns:none!important;
+  gap:22px!important;
+  overflow-x:auto!important;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  scroll-behavior:smooth;
+  padding:6px 2px 20px!important;
+  scrollbar-width:thin;
+  scrollbar-color:#b7c7d4 transparent;
+  overscroll-behavior-x:contain;
+}
+.product-grid::-webkit-scrollbar{height:7px}
+.product-grid::-webkit-scrollbar-track{background:transparent}
+.product-grid::-webkit-scrollbar-thumb{background:#b7c7d4;border-radius:999px}
+.product-card{
+  flex:0 0 calc((100% - 44px)/3)!important;
+  scroll-snap-align:start;
+  display:block!important;
+}
+.product-photo{height:390px!important}
+.product-carousel-hint{margin-top:3px;font-size:12px;color:#8a99a7}
+@media(max-width:980px){
+  .header{height:86px}
+  .brand img{width:240px!important;height:58px!important}
+  .product-card{flex-basis:calc((100% - 22px)/2)!important}
+}
+@media(max-width:620px){
+  .header{height:76px}
+  .brand img{width:205px!important;height:50px!important;padding:6px 10px!important}
+  .product-carousel-toolbar{align-items:flex-end}
+  .product-carousel-label{display:block}
+  .product-carousel-count{margin-top:6px}
+  .product-card{flex-basis:86%!important}
+  .product-photo{height:390px!important}
+  .carousel-btn{width:38px;height:38px}
+}
+
+
+/* === V4: preserve product-card carousel, show images in full, add 15-page catalogue slider === */
+.product-photo{
+  height:390px!important;
+  padding:12px!important;
+  background:#f4f6f8!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.product-photo img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  transform:none!important;
+}
+.product-card:hover .product-photo img{transform:none!important}
+
+.about-grid{grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr)!important;gap:56px!important;align-items:center!important}
+.catalog-showcase{min-width:0;width:100%;position:relative}
+.catalog-viewport{
+  width:100%;overflow:hidden;background:#11151b;border:1px solid #dce3e9;
+  box-shadow:0 22px 55px rgba(7,21,37,.10)
+}
+.catalog-track{display:flex;width:100%;transition:transform .62s cubic-bezier(.22,.61,.36,1);will-change:transform}
+.catalog-slide{flex:0 0 100%;width:100%;display:flex;align-items:center;justify-content:center;background:#11151b}
+.catalog-slide img{display:block;width:100%;height:auto;aspect-ratio:1754/1241;object-fit:contain;object-position:center;background:#11151b}
+.catalog-controls{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:16px}
+.catalog-arrow{
+  width:42px;height:42px;border-radius:50%;border:1px solid #ccd7df;background:#fff;color:#071525;
+  font-size:23px;cursor:pointer;display:grid;place-items:center;transition:.2s
+}
+.catalog-arrow:hover{background:#071525;color:#fff;border-color:#071525}
+.catalog-progress{min-width:80px;text-align:center;font-weight:900;letter-spacing:.08em;color:#071525;font-size:13px}
+.catalog-dots{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:11px}
+.catalog-dot{width:7px;height:7px;border:0;border-radius:50%;background:#c8d4dd;padding:0;cursor:pointer;transition:.2s}
+.catalog-dot.active{width:22px;border-radius:99px;background:#058ed1}
+
+.map-placeholder.map-link{display:block;text-decoration:none;color:inherit;cursor:pointer;transition:.25s;position:relative}
+.map-placeholder.map-link:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(7,21,37,.10)}
+.map-label{position:absolute;z-index:4;left:24px;right:24px;bottom:22px;background:rgba(255,255,255,.94);padding:15px 17px;border:1px solid rgba(7,21,37,.08);backdrop-filter:blur(8px)}
+.map-label b{display:block;font-size:15px;color:#071525;margin-bottom:3px}
+.map-label small{font-size:12px;color:#547084}
+
+.footer-brand img{
+  width:270px!important;height:72px!important;object-fit:contain!important;object-position:center!important;
+  padding:7px 12px!important;background:#fff!important;border-radius:8px!important;margin-bottom:12px!important
+}
+
+@media(max-width:980px){
+  .about-grid{grid-template-columns:1fr!important;gap:36px!important}
+  .catalog-showcase{max-width:900px;margin:0 auto}
+  .product-photo{height:360px!important}
+}
+@media(max-width:760px){
+  .product-photo{height:330px!important;padding:8px!important}
+  .catalog-controls{margin-top:12px}
+  .catalog-arrow{width:38px;height:38px}
+  .footer-brand img{width:240px!important;height:64px!important}
+}
+
+
+
+/* --- 2026-09 update: factory hero, QR popup, full map preview, better footer logo --- */
+.hero-photo{aspect-ratio:4/3!important;object-fit:contain!important;object-position:center center!important;background:rgba(255,255,255,.06)!important;padding:14px!important}
+.hero-visual:before{content:"XINGLI / FACTORY"!important}
+.hero-caption{width:min(360px,84%)!important}
+.map-placeholder{min-height:320px!important;background:#edf2f6!important;display:block!important;border-radius:0!important;position:relative!important;overflow:hidden!important;text-decoration:none!important}
+.map-placeholder:before,.map-placeholder:after{display:none!important}
+.map-snapshot{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:saturate(.98)}
+.map-label{position:absolute;z-index:4;left:24px;right:24px;bottom:22px;background:rgba(255,255,255,.96);padding:18px 20px;border:1px solid rgba(7,21,37,.08);backdrop-filter:blur(10px);box-shadow:0 12px 35px rgba(7,21,37,.12)}
+.map-label b{display:block;font-size:15px;color:#071525;margin-bottom:5px}
+.map-label small{font-size:12px;color:#547084}
+.map-dot{position:absolute;z-index:3;left:56%;top:45%;transform:translate(-50%,-50%);width:18px;height:18px;background:#2c95d8;border:4px solid #fff;border-radius:50%;box-shadow:0 0 0 10px rgba(44,149,216,.18)}
+.map-dot:before{content:"";position:absolute;inset:-13px;border-radius:50%;background:rgba(44,149,216,.12)}
+.footer-brand{max-width:300px}
+.footer-brand img{display:block;width:min(100%,280px)!important;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center!important;padding:8px 12px!important;background:#fff!important;border-radius:8px!important;margin-bottom:12px!important}
+.lead-modal-card{width:min(920px,100%)!important}
+.lead-modal-photo{background:#efe4d5!important;display:flex;align-items:center;justify-content:center;padding:18px}
+.lead-modal-photo img{width:100%;height:100%;object-fit:contain!important;border-radius:18px;box-shadow:0 18px 44px rgba(0,0,0,.12)}
+.lead-modal-copy .quote{margin-top:20px}
+@media(max-width:980px){.lead-modal-photo{min-height:320px!important;max-height:420px!important}}
+@media(max-width:620px){.hero-photo{padding:10px!important}.map-label{left:16px;right:16px;bottom:16px;padding:15px 16px}.footer-brand{max-width:240px}}
+
+
+/* Map preview uses the real AMap screenshot supplied by the user. */
+.map-placeholder.map-link:before,.map-placeholder.map-link:after{display:none!important}
+.map-placeholder.map-link .map-dot{display:none!important}
+
+
+/* --- 2026-09 polish: cleaner factory hero overlays + exact map preview --- */
+.hero-visual{
+  position:relative!important;
+  border-radius:10px!important;
+  overflow:visible!important;
+}
+.hero-photo{
+  width:100%!important;
+  aspect-ratio:4/3!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+  padding:0!important;
+  background:transparent!important;
+  border-radius:10px!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+  box-shadow:0 30px 70px rgba(0,0,0,.28)!important;
+}
+.hero-visual:before{
+  content:"佛山 · 源头工厂"!important;
+  left:18px!important;
+  top:18px!important;
+  padding:9px 13px!important;
+  background:rgba(5,18,31,.72)!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.22)!important;
+  border-radius:999px!important;
+  box-shadow:0 8px 22px rgba(0,0,0,.15)!important;
+  backdrop-filter:blur(10px)!important;
+  -webkit-backdrop-filter:blur(10px)!important;
+  font-size:11px!important;
+  font-weight:800!important;
+  letter-spacing:.12em!important;
+  line-height:1!important;
+}
+.hero-caption{
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  width:auto!important;
+  min-height:120px!important;
+  padding:62px 22px 18px!important;
+  border-left:0!important;
+  border-radius:0 0 10px 10px!important;
+  background:linear-gradient(180deg,rgba(5,18,31,0) 0%,rgba(5,18,31,.32) 35%,rgba(5,18,31,.90) 100%)!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  color:#d7e3ec!important;
+  box-shadow:none!important;
+}
+.hero-caption strong{
+  display:block!important;
+  margin-bottom:2px!important;
+  color:#fff!important;
+  font-size:17px!important;
+  letter-spacing:.01em!important;
+}
+.map-placeholder{
+  min-height:0!important;
+  aspect-ratio:597/459!important;
+  background:#eef3f7!important;
+  border:1px solid var(--line)!important;
+  border-radius:8px!important;
+  overflow:hidden!important;
+}
+.map-snapshot{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  filter:none!important;
+  background:#eef3f7!important;
+}
+.map-label{
+  left:auto!important;
+  right:16px!important;
+  bottom:16px!important;
+  width:auto!important;
+  padding:10px 14px!important;
+  border:1px solid rgba(255,255,255,.22)!important;
+  border-radius:999px!important;
+  background:rgba(7,21,37,.84)!important;
+  box-shadow:0 10px 28px rgba(7,21,37,.18)!important;
+  backdrop-filter:blur(10px)!important;
+  -webkit-backdrop-filter:blur(10px)!important;
+}
+.map-label b{display:none!important}
+.map-label small{
+  display:block!important;
+  color:#fff!important;
+  font-size:12px!important;
+  font-weight:700!important;
+  letter-spacing:.02em!important;
+}
+.map-dot{display:none!important}
+@media(max-width:760px){
+  .hero-visual:before{
+    left:12px!important;
+    top:12px!important;
+    padding:8px 11px!important;
+    font-size:10px!important;
+  }
+  .hero-caption{
+    padding:54px 16px 14px!important;
+    min-height:104px!important;
+  }
+  .hero-caption strong{font-size:15px!important}
+  .map-label{
+    right:10px!important;
+    bottom:10px!important;
+    padding:8px 11px!important;
+  }
+}
+
+
+/* Mobile performance optimizations */
+@media (max-width: 768px) {
+  * { scroll-behavior: auto !important; }
+  .product-track, .brochure-track { scroll-behavior: auto !important; }
+  .hero::before, .hero::after { display:none !important; }
+  .product-card, .hero-photo, .map-placeholder { box-shadow:none !important; }
+}
+img { content-visibility:auto; }
+
+
+/* External-assets mobile performance */
+img{max-width:100%}
+@media (max-width:768px){
+  .product-track,.catalog-track,.brochure-track{scroll-behavior:auto!important}
+}
+
+</style>
+<link rel="preload" as="image" href="images/image_02.webp">
+</head>
+<body>
+<header class="header" id="header"><div class="container nav"><a class="brand" href="#top" aria-label="星力门窗首页"><img src="images/image_01.webp" alt="星力门窗 LOGO" loading="lazy" decoding="async"></a><nav class="navlinks"><a href="#about">关于星力</a><a href="#products">产品系列</a><a href="#standards">配置标准</a><a href="#cooperation">合作支持</a><a href="#contact" class="nav-cta">联系工厂</a></nav></div></header>
+<main id="top">
+<section class="hero"><div class="container hero-grid"><div><div class="eyebrow">XINGLI WINDOWS & DOORS · FOSHAN</div><h1>把稳定供货，<br>做成门店的<em>长期能力</em></h1><p class="hero-desc">佛山市星力门窗有限公司，面向门店、经销商、门窗厂、装修公司、工程客户与加工厂长期配套。专注推拉窗、平开窗与重型门，工厂直供，支持按需配置。</p><div class="hero-actions"><a class="btn primary" href="#products">浏览产品系列 →</a><a class="btn ghost" href="#cooperation">获取经销商报价</a></div></div><div class="hero-visual"><img class="hero-photo" src="images/image_02.webp" alt="佛山星力推拉窗代工厂外景" decoding="async" fetchpriority="high"><div class="hero-caption"><strong>佛山星力推拉窗代工厂</strong>工厂直供 · 稳定供货 · 推拉窗系统整体输出 / 合作 / 加盟</div></div></div></section>
+<section class="metrics"><div class="container metrics-grid"><div class="metric"><strong>15</strong><span>图册产品系列</span></div><div class="metric"><strong>7–10 天</strong><span>半成品参考出货周期</span></div><div class="metric"><strong>12–15 天</strong><span>成品参考出货周期</span></div><div class="metric"><strong>全国发货</strong><span>按合作规则提供运损保障</span></div></div></section>
+<section class="section" id="about"><div class="container about-grid">
+<div class="catalog-showcase" id="catalogShowcase" aria-label="星力门窗15个产品系列图册轮播">
+  <div class="catalog-viewport"><div class="catalog-track" id="catalogTrack"><div class="catalog-slide" data-catalog-slide="1"><img src="images/image_03.webp" alt="星力门窗产品系列图册第1页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="2"><img src="images/image_04.webp" alt="星力门窗产品系列图册第2页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="3"><img src="images/image_05.webp" alt="星力门窗产品系列图册第3页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="4"><img src="images/image_06.webp" alt="星力门窗产品系列图册第4页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="5"><img src="images/image_07.webp" alt="星力门窗产品系列图册第5页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="6"><img src="images/image_08.webp" alt="星力门窗产品系列图册第6页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="7"><img src="images/image_09.webp" alt="星力门窗产品系列图册第7页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="8"><img src="images/image_10.webp" alt="星力门窗产品系列图册第8页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="9"><img src="images/image_11.webp" alt="星力门窗产品系列图册第9页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="10"><img src="images/image_12.webp" alt="星力门窗产品系列图册第10页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="11"><img src="images/image_13.webp" alt="星力门窗产品系列图册第11页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="12"><img src="images/image_14.webp" alt="星力门窗产品系列图册第12页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="13"><img src="images/image_15.webp" alt="星力门窗产品系列图册第13页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="14"><img src="images/image_16.webp" alt="星力门窗产品系列图册第14页" loading="lazy" decoding="async"></div><div class="catalog-slide" data-catalog-slide="15"><img src="images/image_17.webp" alt="星力门窗产品系列图册第15页" loading="lazy" decoding="async"></div></div></div>
+  <div class="catalog-controls">
+    <button class="catalog-arrow" id="catalogPrev" type="button" aria-label="上一页产品图册">‹</button>
+    <div class="catalog-progress"><span id="catalogNow">01</span><span>/</span><span>15</span></div>
+    <button class="catalog-arrow" id="catalogNext" type="button" aria-label="下一页产品图册">›</button>
+  </div>
+  <div class="catalog-dots" id="catalogDots" aria-label="产品图册页码"></div>
+</div><div class="about-copy"><div class="eyebrow">ABOUT XINGLI</div><h2>源头供应，不只是一个价格。</h2><p>真正适合门店长期合作的供应链，需要产品线、配置、交期、售后响应与定制能力形成一套稳定体系。星力门窗把这些基础能力放在同一个工厂端持续交付。</p><p>网站公开展示产品方向与合作能力；具体经销商价格、起算面积与选配规则，以当期正式报价单和业务确认结果为准。</p><div class="about-points"><div class="about-point"><b>工厂直供</b><span>减少中间沟通环节，报价与配置更直接</span></div><div class="about-point"><b>B 端配套</b><span>面向门店、经销商、门窗厂及工程客户</span></div><div class="about-point"><b>支持定制</b><span>可按项目与门店产品定位进行选配</span></div><div class="about-point"><b>售后协同</b><span>以服务群、照片与视频方式快速处理售后</span></div></div></div></div></section>
+<section class="section soft" id="products"><div class="container"><div class="section-head"><div><div class="eyebrow">PRODUCT COLLECTION</div><h2>产品系列</h2></div><div class="filters"><button class="filter active" data-filter="全部">全部</button><button class="filter" data-filter="推拉系列">推拉窗</button><button class="filter" data-filter="平开系列">平开 / 下悬</button><button class="filter" data-filter="重型门">重型门</button></div></div><div class="product-grid" id="productGrid"><article class="product-card" data-cat="推拉系列">
+  <button class="product-hit" data-index="0" aria-label="查看75 两轨断桥推拉窗详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_18.webp" alt="75 两轨断桥推拉窗产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>01</span><span>推拉系列</span></div>
+  <h3>75 两轨断桥推拉窗</h3>
+  <p>两轨设计 · 紧凑实用</p>
+</article>
+<article class="product-card" data-cat="推拉系列">
+  <button class="product-hit" data-index="1" aria-label="查看110 六轨断桥推拉 62 扇详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_19.webp" alt="110 六轨断桥推拉 62 扇产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>02</span><span>推拉系列</span></div>
+  <h3>110 六轨断桥推拉 62 扇</h3>
+  <p>62 窄扇 · 极简线条</p>
+</article>
+<article class="product-card" data-cat="推拉系列">
+  <button class="product-hit" data-index="2" aria-label="查看110 六轨断桥推拉 40 扇详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_20.webp" alt="110 六轨断桥推拉 40 扇产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>03</span><span>推拉系列</span></div>
+  <h3>110 六轨断桥推拉 40 扇</h3>
+  <p>六轨结构 · 稳定顺滑</p>
+</article>
+<article class="product-card" data-cat="推拉系列">
+  <button class="product-hit" data-index="3" aria-label="查看110 三轨断桥推拉系列详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_21.webp" alt="110 三轨断桥推拉系列产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>04</span><span>推拉系列</span></div>
+  <h3>110 三轨断桥推拉系列</h3>
+  <p>三轨结构 · 稳定顺滑</p>
+</article>
+<article class="product-card" data-cat="推拉系列">
+  <button class="product-hit" data-index="4" aria-label="查看100 三轨非断桥推拉窗详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_22.webp" alt="100 三轨非断桥推拉窗产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>05</span><span>推拉系列</span></div>
+  <h3>100 三轨非断桥推拉窗</h3>
+  <p>三轨设计 · 经济实用</p>
+</article>
+<article class="product-card" data-cat="推拉系列">
+  <button class="product-hit" data-index="5" aria-label="查看122 六轨断桥景观推拉窗详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_23.webp" alt="122 六轨断桥景观推拉窗产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>06</span><span>推拉系列</span></div>
+  <h3>122 六轨断桥景观推拉窗</h3>
+  <p>六轨承载 · 宽幅通透</p>
+</article>
+<article class="product-card" data-cat="推拉系列">
+  <button class="product-hit" data-index="6" aria-label="查看122 六轨悬浮断桥推拉窗详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_24.webp" alt="122 六轨悬浮断桥推拉窗产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>07</span><span>推拉系列</span></div>
+  <h3>122 六轨悬浮断桥推拉窗</h3>
+  <p>悬浮设计 · 轻盈通透</p>
+</article>
+<article class="product-card" data-cat="推拉系列">
+  <button class="product-hit" data-index="7" aria-label="查看128 六轨悬浮断桥推拉窗详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_25.webp" alt="128 六轨悬浮断桥推拉窗产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>08</span><span>推拉系列</span></div>
+  <h3>128 六轨悬浮断桥推拉窗</h3>
+  <p>六轨悬浮设计 · 超大面积通透</p>
+</article>
+<article class="product-card" data-cat="推拉系列">
+  <button class="product-hit" data-index="8" aria-label="查看128 六轨断桥景观推拉详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_26.webp" alt="128 六轨断桥景观推拉产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>09</span><span>推拉系列</span></div>
+  <h3>128 六轨断桥景观推拉</h3>
+  <p>六轨结构 · 承重稳固</p>
+</article>
+<article class="product-card" data-cat="平开系列">
+  <button class="product-hit" data-index="9" aria-label="查看110 断桥对开 · 外平开 · 下悬详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_27.webp" alt="110 断桥对开 · 外平开 · 下悬产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>10</span><span>平开系列</span></div>
+  <h3>110 断桥对开 · 外平开 · 下悬</h3>
+  <p>对开窗 · 视野开阔</p>
+</article>
+<article class="product-card" data-cat="平开系列">
+  <button class="product-hit" data-index="10" aria-label="查看110 断桥平开门 · 对开窗详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_28.webp" alt="110 断桥平开门 · 对开窗产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>11</span><span>平开系列</span></div>
+  <h3>110 断桥平开门 · 对开窗</h3>
+  <p>平开门 · 沉稳大气</p>
+</article>
+<article class="product-card" data-cat="重型门">
+  <button class="product-hit" data-index="11" aria-label="查看106 两轨重型门详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_29.webp" alt="106 两轨重型门产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>12</span><span>重型门</span></div>
+  <h3>106 两轨重型门</h3>
+  <p>两轨结构 · 沉稳厚重</p>
+</article>
+<article class="product-card" data-cat="重型门">
+  <button class="product-hit" data-index="12" aria-label="查看125 两轨重型门详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_30.webp" alt="125 两轨重型门产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>13</span><span>重型门</span></div>
+  <h3>125 两轨重型门</h3>
+  <p>两轨结构 · 宽幅通透</p>
+</article>
+<article class="product-card" data-cat="重型门">
+  <button class="product-hit" data-index="13" aria-label="查看161 三轨重型推拉门详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_31.webp" alt="161 三轨重型推拉门产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>14</span><span>重型门</span></div>
+  <h3>161 三轨重型推拉门</h3>
+  <p>三轨结构 · 稳固顺滑</p>
+</article>
+<article class="product-card" data-cat="重型门">
+  <button class="product-hit" data-index="14" aria-label="查看190 三轨重型推拉门详情"></button>
+  <div class="product-photo"><img loading="lazy" src="images/image_32.webp" alt="190 三轨重型推拉门产品实拍" decoding="async"></div>
+  <div class="product-meta"><span>15</span><span>重型门</span></div>
+  <h3>190 三轨重型推拉门</h3>
+  <p>三轨结构 · 稳固顺滑</p>
+</article></div></div></section>
+<section class="section" id="standards"><div class="container standards"><div class="standards-intro"><div class="eyebrow">STANDARD CONFIGURATION</div><h2>把配置写清楚，合作才更长久。</h2><p>以下为报价体系中的常用标准配置摘要。不同系列具体配置、壁厚、玻璃结构与五金会有差异，最终以订单确认单为准。</p></div><div class="std-list"><div class="std"><div class="std-num">01</div><div><h3>6063-T5 铝材标准</h3><p>报价说明标注 6063-T5 标准铝水棒，作为常规型材基础标准。</p></div></div><div class="std"><div class="std-num">02</div><div><h3>PA66 隔热条</h3><p>断桥系列常规标配 PA66 国标融海隔热尼龙条。</p></div></div><div class="std"><div class="std-num">03</div><div><h3>信义玻璃原片</h3><p>成品方案中使用信义国标玻璃原片，并根据系列选用对应中空玻璃结构。</p></div></div><div class="std"><div class="std-num">04</div><div><h3>推拉五金体系</h3><p>常规报价说明包含宝高推拉窗锁具、哥宾佐罗滑轮、三元乙丙胶条等配置。</p></div></div><div class="std"><div class="std-num">05</div><div><h3>辅材与工艺</h3><p>白云玻璃胶、不锈钢螺丝等作为常规配套；不同产品可按报价单增加扶手、方管、转角与加厚选配。</p></div></div></div></div></section>
+<section class="section coop" id="cooperation"><div class="container coop-grid"><div><div class="eyebrow" style="color:#73d6fa">B2B COOPERATION</div><h2>你负责市场，<br>我们负责稳定配套。</h2><p>经销商报价不直接公开在官网。填写需求后生成标准询价文本，可复制给现有对接销售，减少来回沟通。</p><div class="coop-tags"><span class="coop-tag">门窗店</span><span class="coop-tag">经销商</span><span class="coop-tag">门窗厂</span><span class="coop-tag">装修公司</span><span class="coop-tag">建筑 / 工程</span><span class="coop-tag">加工厂</span></div></div><div class="inquiry"><h3>快速生成询价信息</h3><div class="form-grid"><div class="field"><label>客户类型</label><select id="customerType"><option>门窗店 / 经销商</option><option>门窗厂 / 加工厂</option><option>装修公司</option><option>建筑 / 工程客户</option></select></div><div class="field"><label>所在城市</label><input id="city" placeholder="例如：长沙"></div><div class="field"><label>产品系列</label><select id="wantProduct"><option>推拉窗</option><option>平开窗</option><option>重型门</option><option>多系列一起了解</option></select></div><div class="field"><label>需求类型</label><select id="needType"><option>成品</option><option>半成品</option><option>成品 + 半成品</option></select></div><div class="field full"><label>补充需求</label><textarea id="extra" placeholder="尺寸、数量、配置、图纸等"></textarea></div></div><button class="copy-btn" id="copyInquiry">复制询价内容</button><div class="form-note">本站为静态展示站，不会上传或保存你填写的内容。</div></div></div></section>
+<section class="section" id="contact"><div class="container"><div class="section-head"><div><div class="eyebrow">CONTACT FACTORY</div><h2>佛山工厂 · 长期配套</h2></div><p>本网站主要面向 B 端合作客户。工厂专注生产与供货，不做安装；运输及物流费用按实际合作约定执行。</p></div><div class="address"><div class="address-card"><div class="eyebrow">FOSHAN · NANHAI</div><h3>佛山市星力门窗有限公司</h3><p class="big">广东省佛山市南海区颜峰大道22号</p><p>颜峰一村附近 · S55 北侧</p><p>合作范围：门店、经销商、门窗厂、装修公司、建筑商、工程客户、加工厂。</p></div><a class="map-placeholder map-link" id="xingliAmapLink" href="https://ditu.amap.com/ssr/place/B0LAGLRPAS?id=B0LAGLRPAS&name=%E4%BD%9B%E5%B1%B1%E6%98%9F%E5%8A%9B%E9%97%A8%E7%AA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&source=sug" target="_blank" rel="noopener" aria-label="在高德地图打开佛山市星力门窗有限公司位置" data-mobile-amap="https://uri.amap.com/marker?poiid=B0LAGLRPAS&src=xingli-window&callnative=1">
+  <img loading="lazy" decoding="async" class="map-snapshot" src="images/image_33.png" alt="佛山市星力门窗有限公司地图预览">
+  <span class="map-dot" aria-hidden="true"></span>
+  <span class="map-label"><b>佛山市星力门窗有限公司</b><small>点击打开高德地图导航 →</small></span>
+</a></div></div></section>
+</main>
+<footer class="footer"><div class="container footer-grid"><div class="footer-brand"><img src="images/image_34.svg" alt="星力门窗" loading="lazy" decoding="async"><p>佛山市星力门窗有限公司 · 佛山门窗源头工厂</p><p>© 2026 XINGLI WINDOWS & DOORS. All rights reserved.</p></div><div class="footer-links"><a href="#about">关于星力</a><a href="#products">产品系列</a><a href="#standards">配置标准</a><a href="#cooperation">合作支持</a></div></div></footer>
+<div class="modal" id="productModal" role="dialog" aria-modal="true"><div class="modal-card"><div class="modal-photo"><img id="modalImg" alt="产品图片" loading="lazy" decoding="async"></div><div class="modal-copy"><button class="modal-close" id="modalClose" aria-label="关闭">×</button><div class="eyebrow" id="modalCat"></div><h3 id="modalName"></h3><ul id="modalPoints"></ul><a href="#cooperation" class="quote" id="modalQuote">获取经销商报价 →</a></div></div></div><div class="modal" id="leadQrModal" role="dialog" aria-modal="true"><div class="modal-card lead-modal-card"><div class="modal-photo lead-modal-photo"><img src="images/image_35.webp" alt="佛山星力门窗销售罗姐微信二维码" loading="lazy" decoding="async"></div><div class="modal-copy lead-modal-copy"><button class="modal-close" id="leadQrClose" aria-label="关闭">×</button><div class="eyebrow">WECHAT QR</div><h3>询价内容已复制<br>可直接发给销售，也可扫码添加</h3><ul><li>添加对象：佛山星力门窗销售罗姐</li><li>适用客户：门店、经销商、门窗厂、装修公司、工程客户、加工厂</li><li>支持事项：专业解答、免费出图、报价与方案沟通</li></ul><a href="#contact" class="quote" id="leadQrDone">我知道了</a></div></div></div><div class="toast" id="toast">询价内容已复制</div>
+<script>
+const products=[{"cat": "推拉系列", "name": "75 两轨断桥推拉窗", "points": ["两轨设计 · 紧凑实用", "断桥型材 · 隔热保温", "顺滑推拉 · 操作轻便"], "img": "images/image_18.webp"}, {"cat": "推拉系列", "name": "110 六轨断桥推拉 62 扇", "points": ["62 窄扇 · 极简线条", "六轨结构 · 顺滑稳定", "断桥型材 · 高效隔热"], "img": "images/image_19.webp"}, {"cat": "推拉系列", "name": "110 六轨断桥推拉 40 扇", "points": ["六轨结构 · 稳定顺滑", "断桥隔热 · 节能环保", "通透视野 · 现代极简"], "img": "images/image_20.webp"}, {"cat": "推拉系列", "name": "110 三轨断桥推拉系列", "points": ["三轨结构 · 稳定顺滑", "断桥型材 · 节能静音", "大视野通透 · 现代简约"], "img": "images/image_21.webp"}, {"cat": "推拉系列", "name": "100 三轨非断桥推拉窗", "points": ["三轨设计 · 经济实用", "顺滑推拉 · 操作轻便", "简约外观 · 高性价比"], "img": "images/image_22.webp"}, {"cat": "推拉系列", "name": "122 六轨断桥景观推拉窗", "points": ["六轨承载 · 宽幅通透", "断桥节能 · 保温隔热", "大视野景观 · 拥抱自然"], "img": "images/image_23.webp"}, {"cat": "推拉系列", "name": "122 六轨悬浮断桥推拉窗", "points": ["悬浮设计 · 轻盈通透", "六轨结构 · 稳定顺滑", "断桥型材 · 隔音隔热"], "img": "images/image_24.webp"}, {"cat": "推拉系列", "name": "128 六轨悬浮断桥推拉窗", "points": ["六轨悬浮设计 · 超大面积通透", "断桥型材 · 隔音隔热出众", "大玻璃景观视野 · 顺滑静音"], "img": "images/image_25.webp"}, {"cat": "推拉系列", "name": "128 六轨断桥景观推拉", "points": ["六轨结构 · 承重稳固", "景观大玻璃 · 引景入室", "断桥隔音 · 舒适静音体验"], "img": "images/image_26.webp"}, {"cat": "平开系列", "name": "110 断桥对开 · 外平开 · 下悬", "points": ["对开窗 · 视野开阔", "外平开 + 下悬 · 灵活通风", "下悬窗 + 回卷纱 · 实用防护"], "img": "images/image_27.webp"}, {"cat": "平开系列", "name": "110 断桥平开门 · 对开窗", "points": ["平开门 · 沉稳大气", "断桥结构 · 密封保温", "对开窗 · 通透采光"], "img": "images/image_28.webp"}, {"cat": "重型门", "name": "106 两轨重型门", "points": ["两轨结构 · 沉稳厚重", "加厚型材 · 坚固耐用", "超大视野 · 通透采光"], "img": "images/image_29.webp"}, {"cat": "重型门", "name": "125 两轨重型门", "points": ["两轨结构 · 宽幅通透", "加厚型材 · 坚固耐用", "大玻璃视野 · 现代大气"], "img": "images/image_30.webp"}, {"cat": "重型门", "name": "161 三轨重型推拉门", "points": ["三轨结构 · 稳固顺滑", "重型型材 · 承重出色", "宽幅玻璃 · 通透大气"], "img": "images/image_31.webp"}, {"cat": "重型门", "name": "190 三轨重型推拉门", "points": ["三轨结构 · 稳固顺滑", "重型型材 · 承重出色", "宽幅玻璃 · 通透大气"], "img": "images/image_32.webp"}];
+const header=document.getElementById('header');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30),{passive:true});
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');const f=btn.dataset.filter;document.querySelectorAll('.product-card').forEach(c=>c.style.display=(f==='全部'||c.dataset.cat===f)?'block':'none')}));
+const modal=document.getElementById('productModal'),mi=document.getElementById('modalImg'),mn=document.getElementById('modalName'),mc=document.getElementById('modalCat'),mp=document.getElementById('modalPoints');
+document.querySelectorAll('.product-hit').forEach(b=>b.addEventListener('click',()=>{const p=products[+b.dataset.index];mi.src=p.img;mi.alt=p.name;mn.textContent=p.name;mc.textContent=p.cat;mp.innerHTML=p.points.map(x=>`<li>${x}</li>`).join('');modal.classList.add('open');document.body.style.overflow='hidden'}));
+function closeModal(){modal.classList.remove('open');document.body.style.overflow=''} document.getElementById('modalClose').onclick=closeModal;modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});document.getElementById('modalQuote').addEventListener('click',closeModal);addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+const toast=document.getElementById('toast');
+const leadQrModal=document.getElementById('leadQrModal');
+function openLeadQr(){ if(!leadQrModal) return; leadQrModal.classList.add('open'); document.body.style.overflow='hidden'; }
+function closeLeadQr(){ if(!leadQrModal) return; leadQrModal.classList.remove('open'); document.body.style.overflow=''; }
+const leadQrClose=document.getElementById('leadQrClose');
+const leadQrDone=document.getElementById('leadQrDone');
+if(leadQrClose) leadQrClose.onclick=closeLeadQr;
+if(leadQrDone) leadQrDone.onclick=closeLeadQr;
+if(leadQrModal) leadQrModal.addEventListener('click',e=>{if(e.target===leadQrModal) closeLeadQr()});
+document.getElementById('copyInquiry').addEventListener('click',async()=>{const txt=`老板您好，我想了解星力门窗经销商合作报价。
+客户类型：${document.getElementById('customerType').value}
+所在城市：${document.getElementById('city').value||'未填写'}
+产品系列：${document.getElementById('wantProduct').value}
+需求类型：${document.getElementById('needType').value}
+补充需求：${document.getElementById('extra').value||'暂无'}`;try{await navigator.clipboard.writeText(txt)}catch(e){const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');ta.remove()}toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);openLeadQr()});
+</script>
+
+<script>
+(function(){
+  const grid = document.getElementById('productGrid');
+  if(!grid) return;
+  const cards = [...grid.querySelectorAll('.product-card')];
+  if(!cards.length) return;
+
+  // Make sure every catalogue item is visible in the horizontal series.
+  cards.forEach(c => c.style.display = 'block');
+
+  const shell = document.createElement('div');
+  shell.className = 'product-carousel-shell';
+  grid.parentNode.insertBefore(shell, grid);
+  shell.appendChild(grid);
+
+  const toolbar = document.createElement('div');
+  toolbar.className = 'product-carousel-toolbar';
+  toolbar.innerHTML = `
+    <div class="product-carousel-label">
+      <span><b>15 大产品系列</b><div class="product-carousel-hint">自动滚动 · 可拖动查看 · 点击产品查看详情</div></span>
+      <span class="product-carousel-count"><span id="carouselNow">01</span>&nbsp;/&nbsp;${String(cards.length).padStart(2,'0')}</span>
+    </div>
+    <div class="product-carousel-actions">
+      <button class="carousel-btn" type="button" id="carouselPrev" aria-label="上一组产品">‹</button>
+      <button class="carousel-btn" type="button" id="carouselNext" aria-label="下一组产品">›</button>
+    </div>`;
+  shell.insertBefore(toolbar, grid);
+
+  const now = toolbar.querySelector('#carouselNow');
+  const prev = toolbar.querySelector('#carouselPrev');
+  const next = toolbar.querySelector('#carouselNext');
+
+  function stepSize(){
+    if(cards.length < 2) return cards[0].getBoundingClientRect().width;
+    const a = cards[0].getBoundingClientRect();
+    const b = cards[1].getBoundingClientRect();
+    return Math.max(1, b.left - a.left);
+  }
+  function updateCounter(){
+    const g = grid.getBoundingClientRect();
+    let best = 0, dist = Infinity;
+    cards.forEach((c,i)=>{
+      const d = Math.abs(c.getBoundingClientRect().left - g.left);
+      if(d < dist){dist=d;best=i}
+    });
+    now.textContent = String(best+1).padStart(2,'0');
+  }
+  function move(dir){
+    const max = grid.scrollWidth - grid.clientWidth;
+    if(dir>0 && grid.scrollLeft >= max-12){
+      grid.scrollTo({left:0,behavior:'smooth'});
+    }else if(dir<0 && grid.scrollLeft <= 12){
+      grid.scrollTo({left:max,behavior:'smooth'});
+    }else{
+      grid.scrollBy({left:dir*stepSize(),behavior:'smooth'});
+    }
+    setTimeout(updateCounter,420);
+  }
+  prev.addEventListener('click',()=>move(-1));
+  next.addEventListener('click',()=>move(1));
+  grid.addEventListener('scroll',()=>requestAnimationFrame(updateCounter),{passive:true});
+
+  let timer;
+  const start = ()=>{ stop(); timer=setInterval(()=>move(1),3600); };
+  const stop = ()=>{ if(timer) clearInterval(timer); };
+  shell.addEventListener('mouseenter',stop);
+  shell.addEventListener('mouseleave',start);
+  shell.addEventListener('touchstart',stop,{passive:true});
+  shell.addEventListener('touchend',()=>setTimeout(start,1500),{passive:true});
+  document.addEventListener('visibilitychange',()=>document.hidden?stop():start());
+  updateCounter();
+  start();
+})();
+</script>
+
+
+<script>
+(function(){
+  const box=document.getElementById('catalogShowcase');
+  const track=document.getElementById('catalogTrack');
+  if(!box||!track) return;
+  const slides=[...track.querySelectorAll('.catalog-slide')];
+  const prev=document.getElementById('catalogPrev');
+  const next=document.getElementById('catalogNext');
+  const now=document.getElementById('catalogNow');
+  const dots=document.getElementById('catalogDots');
+  let index=0,timer=null,touchX=null;
+  slides.forEach((_,i)=>{
+    const b=document.createElement('button');
+    b.type='button';b.className='catalog-dot'+(i===0?' active':'');
+    b.setAttribute('aria-label','查看第'+String(i+1).padStart(2,'0')+'个产品系列');
+    b.addEventListener('click',()=>go(i,true));dots.appendChild(b);
+  });
+  const dotEls=[...dots.children];
+  function render(){
+    track.style.transform=`translateX(-${index*100}%)`;
+    now.textContent=String(index+1).padStart(2,'0');
+    dotEls.forEach((d,i)=>d.classList.toggle('active',i===index));
+  }
+  function go(i,user=false){index=(i+slides.length)%slides.length;render();if(user) restart()}
+  function start(){stop();timer=setInterval(()=>go(index+1),4500)}
+  function stop(){if(timer){clearInterval(timer);timer=null}}
+  function restart(){stop();setTimeout(start,1200)}
+  prev.addEventListener('click',()=>go(index-1,true));
+  next.addEventListener('click',()=>go(index+1,true));
+  box.addEventListener('mouseenter',stop);box.addEventListener('mouseleave',start);
+  box.addEventListener('touchstart',e=>{touchX=e.touches[0].clientX;stop()},{passive:true});
+  box.addEventListener('touchend',e=>{if(touchX!==null){const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>45)go(index+(dx<0?1:-1));touchX=null}start()},{passive:true});
+  render();start();
+})();
+</script>
+
+
+<script>
+(function(){
+  const link=document.getElementById('xingliAmapLink');
+  if(!link) return;
+  const ua=navigator.userAgent||'';
+  const isIOS=/iPhone|iPad|iPod/i.test(ua) || (navigator.maxTouchPoints>1 && /Macintosh/i.test(ua));
+  const isAndroid=/Android/i.test(ua);
+  const mobileLink='https://uri.amap.com/marker?poiid=B0LAGLRPAS&src=xingli-window&callnative=1';
+  const pcLink='https://ditu.amap.com/ssr/place/B0LAGLRPAS?id=B0LAGLRPAS&name=%E4%BD%9B%E5%B1%B1%E6%98%9F%E5%8A%9B%E9%97%A8%E7%AA%97%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&source=sug';
+  const hint=link.querySelector('.map-label small');
+
+  // On mobile, use AMap's official Web URI with callnative=1.
+  // Keeping this as a direct anchor navigation gives iOS Safari the best chance
+  // to hand the request to the installed AMap app from the user's tap.
+  if(isIOS || isAndroid){
+    link.href=mobileLink;
+    link.removeAttribute('target');
+    if(hint) hint.textContent='点击优先打开高德地图 App →';
+  }else{
+    link.href=pcLink;
+    link.target='_blank';
+    if(hint) hint.textContent='点击打开高德地图网页版 →';
+  }
+})();
+</script>
+</body></html>
